@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="463" height="159" viewBox="0 0 463 159">
+    <defs>
+        <filter id="prefix__a" width="117.9%" height="131.6%" x="-6.7%" y="-13.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".381" result="shadowSpreadOuter1"/>
+            <feOffset dx="1" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <path id="prefix__b" d="M30.042 8.087L49.055 19.065 49.055 41.019 30.042 51.996 11.029 41.019 11.029 19.065z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g opacity=".498" transform="translate(-13 -18) translate(21.795 57.895) rotate(30 30.042 30.042)">
+                <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+                <use fill="#FFF" stroke="#4A90E2" stroke-width=".762" xlink:href="#prefix__b"/>
+            </g>
+            <path fill="#4A90E2" fill-rule="nonzero" d="M37.197 20.964H23.494c-.724 0-1.31.586-1.31 1.31V35.98c0 .724.586 1.31 1.31 1.31H37.2c.724 0 1.31-.586 1.31-1.31V22.275c-.002-.725-.59-1.31-1.312-1.31zm0 15.015H23.494V22.275h13.703v13.704zm-12.47-6.376c.127.127.294.19.461.19.168 0 .337-.063.465-.192l2.554-2.564c.255-.255.255-.666.002-.923l-2.555-2.587c-.254-.257-.67-.26-.926-.006-.257.255-.26.67-.005.926l2.098 2.126-2.097 2.103c-.254.257-.254.67.002.927zm3.264-.472c0 .363.293.656.653.657l3.62.006h.001c.363 0 .656-.293.656-.653 0-.363-.293-.656-.654-.657l-3.62-.006h-.001c-.36 0-.653.293-.655.653z" transform="translate(-13 -18) translate(21.795 57.895)"/>
+        </g>
+        <g stroke="#4A90E2" stroke-width=".762">
+            <path d="M51.227 119.649L83.443 138.249 83.443 175.449 51.227 194.049 19.01 175.449 19.01 138.249z" opacity=".203" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -34.331)"/>
+            <path d="M111.601 84.278L143.817 102.878 143.817 140.078 111.601 158.679 79.384 140.078 79.384 102.878z" opacity=".503" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -295.021)"/>
+            <path stroke-linecap="round" d="M171.975 119.649L204.191 138.249 204.191 175.449 171.975 194.049 139.759 175.449 139.759 138.249z" opacity=".7" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -484.97)"/>
+            <path d="M232.349 13.647L264.565 32.248 264.565 69.448 232.349 88.048 200.133 69.448 200.133 32.248z" opacity=".303" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -816.29)"/>
+            <path d="M232.349 84.278L264.565 102.878 264.565 140.078 232.349 158.679 200.133 140.078 200.133 102.878z" opacity=".303" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -745.66)"/>
+            <path d="M292.723 119.649L324.94 138.249 324.94 175.449 292.723 194.049 260.507 175.449 260.507 138.249z" opacity=".303" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -935.609)"/>
+            <path d="M413.472 119.649L445.688 138.249 445.688 175.449 413.472 194.049 381.255 175.449 381.255 138.249z" opacity=".303" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -1386.248)"/>
+            <path d="M353.097 155.019L385.314 173.62 385.314 210.82 353.097 229.42 320.881 210.82 320.881 173.62z" opacity=".303" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -1125.558)"/>
+            <path d="M292.723 48.907L324.94 67.507 324.94 104.708 292.723 123.308 260.507 104.708 260.507 67.507z" opacity=".303" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -1006.35)"/>
+            <path d="M353.097 84.278L385.314 102.878 385.314 140.078 353.097 158.679 320.881 140.078 320.881 102.878z" opacity=".303" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -1196.3)"/>
+            <path d="M474 84.278L506.217 102.878 506.217 140.078 474 158.679 441.784 140.078 441.784 102.878z" opacity=".603" transform="translate(-13 -18) scale(-1 1) rotate(30 0 -1647.515)"/>
+        </g>
+    </g>
+</svg>

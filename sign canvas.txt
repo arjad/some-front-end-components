@@ -1,0 +1,14 @@
+import Editor from "screenshot-editor-test";
+
+class App extends Component {
+  render() {
+    return (
+      <Editor
+        imgSrc="https://i.imgur.com/aZO5Kol.jpeg"
+        // onDrawingEnd={this.onDrawingEnd}
+        lineWidth={5}
+      />
+    );
+  }
+}
+export default App;

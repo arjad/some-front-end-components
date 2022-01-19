@@ -1,0 +1,39 @@
+cursor image https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_image_magnifier_glass image magnifier
+
+https://www.w3schools.com/howto/howto_css_thumbnail.asp image click to bigger
+
+modal image https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+
+
+google maps
+https://www.youtube.com/watch?v=9CY0V0JAgNU
+https://www.youtube.com/watch?v=KIC0OK9nKXY
+https://www.youtube.com/watch?v=UqXeX1Irv5o
+
+
+card hover effects
+https://codepen.io/search/pens?q=css+only&cursor=ZD0xJm89MCZwPTEx
+odepen.io/suez/pen/wMMgXp/
+
+
+
+https://drive.google.com/file/d/16B43xL8LUjSaVjXY_KPypc9_HqCM6jvv/view
+link of moving border
+https://www.youtube.com/watch?v=xVF8kztvgok
+
+
+earth rotation (asim)
+https://www.youtube.com/watch?v=ib8AYFCZtdk
+
+
+loading animation
+https://www.youtube.com/watch?v=OqcgQnn3dBk&list=PL5e68lK9hEzcSUe73TgkQYGmYz0Fh9ptT
+
+
+wallpapert text effect ghost
+https://www.youtube.com/watch?v=2KsYS1qQ9qQ
+
+footer wave
+https://www.youtube.com/watch?v=UpkEANWC2Mss

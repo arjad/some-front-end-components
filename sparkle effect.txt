@@ -1,0 +1,11 @@
+import React from "react";
+import Sparkle from "react-sparkle";
+import "./styles.css"
+const App = () => (
+  // Note: the parent of Sparkle must be positioned relatively or absolutely
+  <div className="ss">
+    <Sparkle />
+    dsfrtds
+  </div>
+);
+export default App;

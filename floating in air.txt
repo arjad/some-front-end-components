@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<style type="text/css">
+.main {
+    position: absolute;
+    left: 130px;
+    top: -10px;
+    width: 40px;
+    height: 20px;
+    background: #302e37;
+}
+@keyframes bounce 
+{
+    0%,100%{
+        transform: translate(0px, -20px) ;
+    }
+    50% {
+        transform: translate(0px, 20px) ;
+    }
+}
+.helicopter {
+    animation: bounce 5s infinite; /* adding bounce keyframes with duration 5s and infinite loop */
+}
+</style>
+</head>
+<body> 
+<br/><br/>
+<main class="helicopter">
+     
+     <div class="main"></div>
+    
+     <main>
+</body>
+</html>

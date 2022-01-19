@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Mousemove Effect | Change Background Position On Mousemove</title>
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Segoe UI", sans-serif;
+  background: url(bg.png)no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.container h2{
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 32px;
+  line-height: 60px;
+}
+
+.container h2 span{
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
+@media (max-width:800px){
+  .container h2{
+    font-size: 60px;
+    letter-spacing: 19px;
+    line-height: 35px;
+  }
+
+  .container h2 span{
+    font-size: 26px;
+  }
+}
+      
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <h2 class="object" data-value="3">404<br><span>Error Page</span></h2>
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgVFhIYGBgYHBoaGBgaGhgeGhgaHhUZHBoaGB4cIS4lHB4rIRwaJjgnKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8PGBAQGDEhGCExMTE0MTQ0MTExNDExMTExNDE0NDQxMTE0NDExNDExMTQxNDE0MTExND8xNDExMTExNP/AABEIAOMA3gMBIgACEQEDEQH/xAAbAAEBAAIDAQAAAAAAAAAAAAAAAQMGAgQFB//EADwQAAECBAMFBwMCBAYDAQAAAAEAAhESITEDImEEMkFxkQVCUYGh0fAGE1JiwQcjgvEUU3KSseEzQ3Mk/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwD68901AjXy0N0e2WoujGzVN0BjZankoWzGIsqx01DzUc4tMBZBXOmoOaNfKIG6ObLUcka2ImN0BjZanko5kxiLKsdNQ81HOLTAWQVzpqDmjXQEDf3RzZajkjWxExugMbLU8lC2JmFvZVpmoeajiQZRb3QV5moFWuAEDf3UeJahVrQRMboIxstTyULYmYW9lWmahUcSDKLe6CvM1AgMBLx90eJahA2Iib+yAwS34oWxM3C/RGGa/BC6Bl4W6oDnTUHNGPlEDdHtlqEY2YRN0BjZankoWzGYWVY6ah5qF0plFkFc6ag5o10BKb+6ObLUcka2ImN/ZAY2WpRwjUckaZqFHOloEEayWp9Ecyao9UYS6hsjnFpgLIK501BzqjXyiBuj2y1F0a0ERN0Ea2Wp5UQtmMwt7I0zUNrqucQYCyA4zUHOqNfKIG6PbLUI1oIiboI1stTyohbMZhb2RpmobXVc4gwFkBxmoOdUa6AlN/dHiWoRrQRMboI0S1PohbEzC3sjTNRyrnEGAsgOM1BzqjXQEpv7o8S1CNaCJjdBGiWp9ELYmbhfWiMM28hJBlFvdBXGag4eKB0BLxtpVHCXdQNBE3G/RBGtlqeVELJjMLIwl1DZHOLTAWQVxmoOdUa+UQN0e2FW3sjWgiJugjWy1PKiFsTMLeyNM1HI5xBlFkFcZqDnVGmFDzojxLUI1s1TdAc6ag9Ua6Wh9Ec0NqL9UY0GpugjWy1PKiFkxmFtUaS6jrdFXOIMBZAcZqDnVGulEDf3RwDai/VGtBETdBGtlqeVELJjMPVGmajvZVziDAWQHGag51RrpRA390cA2ov1RrQRE3QRrZanlRC2JmFvWiNM1HeyOcQYC3yKCuM1B6oHQEDf3Rwl3fdVrQRE3QcWtlqeVELYmYW9aI0zUd7KucQYCyA4zUHDxQOgJeNtKo4S7vugaCJjf5BBGiWp4+CFsTNwvrRGGbe9kJIMosgrnTUHOqNfLQ+iOaG1F+qNaCIm6CNbLU8qIWTGYWRpLqOt0Vc4gwFkBxmoOdUa6UQN/SqPEtW+6NaCIm6CNbLU8qKkRqOVVGGbe9kcS2jbdUBrJan0RzJqj1RpJo63RHOIMG26oK501BzqjXy0KOAFRfqjWgiJugjWy1PKiFs2YfII2Jo63SqrnEGAsgOdNQc6o18tCjgBu36o1oIiboI1stTyohbNmHyCNiaOt0qq5xBgLIDnTUHOqB0BLx90cIbt+qNaCIm/yCCAS1PohZMZuHsjTHe9lXOIMBZAc6ag51QOgJePujhDd90a0ERN/kKII0S1PHwQtiZuF9aI0x3vZCSDAW+RqgrjNQcPFA6Al420qjhLu+6ACETvfvwogjWS1PKiOZNmCNJNHW6I5xBg2yCudNQc6o10uU/Io4AVbfrRGtBETdBGtlqeVELJjNw9kaY0dbojnEGAt8igrnTUHOqNMtDzojhDd90a0Grr9EBz5qBGvloUcAKi/VGgGpv0QRrZankhZNmRpJ3rdKoSQYNt1QVzpqDmgdLl+VRwA3b9aI0AiJv8ggjWy1PJCybMjSTvW6VQkgwbbqgrnTUHOqB0uX5VHADdv1ojQCIm/wAggjWy1PJC2Ob5RGknet0QkgwFvkaoK4zUHDxQOly/Ko4Q3fSqNaCIm/yFEEa2Wp5IWxzfKI0k71uiEkGAt8jVBXGag4eKB0Mvl1Rwhu+6ghCJ3vkKIDRLU8fBUtiZuF+ixjEjveXBYn7TAwG7+3GqDsF81BzqoMUNyn0Xn4+1taItIHiY8F47/qbAcSGvOK8GBbgtfiOB4TDDBl5mCDZg6Wp5UQmbN8otN2r6ofhtL8XZMdmE2rnvOA0NHjKcSY8gIngCV18H692Z2MMFjnwMR9xzC3DjCMJnQNeBhC1ahBvZxg6g5o3HAy/KrU8b6kYGz4Qc9v5tgMMjTFxC3DPk4leL299dnZWtdibLGeMmd7S+EIkH7UhAiLON0H0huWprwoqRNUcl5XYfaI2jCZiwc1r2teGuECIixhxXqEkbtuqChktboWTVso0k71taI4kHLbSqCl01BTigdLlRwA3b6VojQCIuvrRBA2WprwQtmzfKIwk71taVRxIMG2+RQUumoKcUDpcqOAG7fStEaARF19aIIGy1NeCFs2b5RGEnetrSqOJBgLfIoKXTUFOKB0MvyqOAG7fStEaBCJ3vXSiCBstTWNELZs3yiNMd62tFHOIMBu/IoORdNQU4qTy5fXmuGLiAbt9KrqYu0iESaoOy58lTVdXFx45o69Fr209vOeD9rD+4Iw+69wZgNdaBxCDOeErA8xpALy9ua0gna8aZlyx5fgYDQY3wmk42KPH7hYw6IPY2v6mY5xw8IPxsQXZgtL3A+DyMjP63BefibdtLyWOfhbOQK4bA7atqAP5Mw8mHzJcFq/aP15s2E37WFNiAQDcPDaMPBGgw8IgOaf1PfyXhbT27t+M2VrGbNgj8gxrQP9MoaDqGA6qrG47X/hmAu2ibG/XteM1zL93Bw4YR5Ehyz9kfU+FtJ+1gY5BbGGDgYchcB3mRbRq+T452drpsXGxNqfxqQzze4zEclG9u47SDs4GzgWOGJXWhV9+kEqvtG37DhMaH7U7BwG3a7aH/AHMTm1pMA6EbRXzL6q7U2Bzm/wCFbj7Q5jZXPxItbK0AMcwCBErRCJaKAVXpfTX0ps+1YY2naNpfjONHtc4iVw7rySXHQxEQVvewdl4TGlmDs7GtIgcoAcIcY1dHzQah9N9p7VtjZ27Rg7OWQY97WF+1PyiJnxSS0OqRLQW4Laey/pPDnGI+fGeP/btDziP/AKQ6jeiyfS30YzZsR7w9+cQkNGNE0QBxJFQCeC3DDwIGAt6a1UQ2XDBaGgQgu40y0vxULAN2+laLk2BvfWlEQL5qWQPlpdHADdvpVGgHevrRBA2Wt+CFk2ayMJO9bWlUcTHLbRBSZqW4oHS5flUdAbt9K0RoEM19b6IIGy1vwQsmzIwk71taVUcSDltpZByJmpbigdLl+VXHEcBu30rRYziiFYTa30QZYS1vwXFxjmj5cl0nbV+VtVrfbX1ps2zuLXY7S78MPO7lK2MPOCDa8TaQ6loVXWxNuDRDw4r5h2n/ABAxnA/YwG4LP8zHdmhoxpoeZWqbVj4+1GL8TG2mPCP28EeQgD5RRY+n9p/XWy4JLRi/dfXJgid1LiIyg8yF5A+rNmxmzY72sMTHCxnAhoG7/LbGd0JXZw5sbAQitExMJmEIYu0Mwx/l4IE3mYR84Dmui7tzDYf/AM+zCb88SLn/APMfXyVWNy7Z+pdrxXkbIJWBsP8AEPaWONKyB2ZrP0wl0C1HbG4MZtp2t2O8RMjN0HiAbDylXmbVtePjf+TEMPxs3/aKdU2Ts8vcGsY7EcbNaCT5AKUdpvbElNm2dmHwnInf/udQeq6eMH4hmxMRzjqYw5cB5Ldux/4ebTiQOIW4Df1Zn+TQYDzIW89kfQezYRBOGcQiGfEzDmG7o6R1Qr5H2R9O42OR9nAc/wDVCDR/U6A8ord+yv4amIO0Yv8ARh/u9w/4HmvqbNja0CQDkPDkuzhbOIZoR1uiVr3ZH0zgbMP5eE0RgCalx8IudE+PVe3h7HHMu3hs/K2tKquiDltpbVEcGsDqQhxWRrpcvyqroDdvpWiNAhXe9dEEDZa34IWzVtwRsTvW1oq6I3baVQAyWt+CSTVsjY962qjoxy20QWaaluKB0uW6Oh3b6eCNIhmvqggbLW/BC2bNb/pYvuflbXxXWx9qgcttPVB23YwdS3FYH7UGZbrUPqD652XZ4tGJO8dzDg5w0cYys8yCvn3bH15tWNEYcMBni3M8jV5EG+Qjqix9Y7U7dwdmE+LjMYDQBxAJ/wBIu7yC0Ltr+J7SSNmwXPP5vys5hozO85V86xAXOL3vc9xu55LnHmTUrG94CLG7dm7bj9pDGZi4u0OxA2bCwNnDWYbrxOIbhoMozO7y8jD7P+02OI/C2ZvgIPxD5nj5OXi9ndq42C+fAxThvcCycGEA4iMTwEQK6K9s9i42DiluO+Z7gHlwJdNNHvGpqCPJB38XtfZmGOHhOxnjv4hMOYBt5ALobZ2ztOLQvLG/i3KPc9Vx2Ds573S4eG57vBoJPn4Bbp2T/DnHfA4zxht/Fud3mRlHUoPnrNlHExXvdkfTG0Y8Pt4JDT33ZWc4m/lFfYOyforZsGBZhB7x3353WuAaN8gFs2DsohXe9dESvmnZX8M2Ng7aMQvP4Myt5FxzHygt67L7BwsJv8rDaxvg0VMPE3J5r2MLB/K2qyywNN301RK67NnDqQhBZ2tAyQ0jzWR4/HzgghCu96x4II1ktb8EkmzWVbHvW1R0Y5baIBM1LcUmly3/AO0dDu308EbCGa+t0EDZa34JLNm9OSMj3ra+KGMabultUFJmpbigdLS/FHQ7t9EbDjfXwQWeallxnlpdV8IZb6LC7EEM19boOTjJWMeC6uNjRzRhovL7S7YbhxDovdCIY2Ex1qQGj9TiG6rW+1dpNHbZjs2fCMYYRe9odW7oQxcawyMDGVOZ4QZ/qP682fBiwO+5iA7jCDA+D3WbfU6L5v2z9VbVtILXYn28M9zDJER4PdvO9Bosv1b2ns+O3Dds2FilmCCDinDazBlJEG4bGCDAHR3sxjWK1V+OSjWYzANbZY37R4LFg4b3ulYxz3fixpcejRFbJ2Z9BbbjQJwxhtPHEMDDxDWxPWChWtOxCuDAXENaC5xs0AknkBUr6z2Z/CzBbA42K/Fdxa3Iz0i7w7wW8dk9gYGA2XDwWM/0tAJ5m581Ur4p2X9BbbjAF2H9lh72JR0NGDN1gvqGB9GsxG4btpP3n4bAyMC0OhCpAdE24mFVuGBs35Cmvis4wq03dLaoV5ew9mMa0MZhtY0cGgAdAvQZhBuWHnzXZc0d2+irQIVhNrfREY24Ulb8PBcwyOb05IyPetr4oYxpu+mqBGaloVVmhl8o8/7o/wDTfRBCFd710QSEtbxVljm84ckZ+ryioYxpu+kOKCzTUtxSeXLdHQ7t9PBGQhmvrdBJZa34JLNmtpyRke9bXxQxjltpbVBZpqW4pNLl9eaOh3b6eCNhCu9rfRBJZa34JLNW3BVse9bVHR7ttEHFzZa34LxO2MfFjDDwXuJG8JJRf8nCvl1XuNB71tVixcMndtog0FnZO1vJ/ms2cExccIT4zjaY42IBAw4tYDqVdl+kNnY8vOF9zENTiYznYjyfEl0RHkt6fgDu308EZgCGaEdUWtb2/sUYmE7CfuPEpa0AQHiDWBEARReb2f8Aw62Jmb7M/wD9HOfbQmX0W8YeD+VtfFcyyuW2ltUR5Ox9mMaJGYbWNFYNaAOgAXeZgBuWEdV23Ad2+ngqwCGa+t0GFuzhlb8FkGFHNbTkqyPetr4oYxy20tqgRmpbj4pNLl9earod2+ngjYQrveuiCSy1vGngks2aMNOSN/VbVDGNN301QJpqW4+KTS5fXmq6Hdvp4I2EK73rogkJa3j5JLHN5w5f2Rv6raoYxpu+mqBGaloeas0MvlHmj/0+cEEIV3vWPBBJZa34KyTVtojY962qOjHLbRBJpqW4+KTS5b681XQ7t9PBGwhmvrdBJZa34eCss2a2nJRke9bXxQxjTd0tqgTTUtx8Umlpfiq6HdvojYcb6+CCTTUtxVnlpdHQ7t9EbDvX1QSWWt+CSTZrIyPetr4qujHLbRBJpqW4pNLlvrzVdDu308EbCGa+t9ECWWt+CSTZrKMj3ra+Kroxy20QSaaluKTS5b681XQ7t9PBGwhmvrfRAllrfgksc3pyUZHvW18UMY03fTVAmmpaFUmlyw8+ar/030RsIV3vXRAllrfgksc3pyUZHvW18UMY03fTVAjNS0Emhl8o8/7qv/TfRBCFd710QIS1vFJY5vOHJGfq8oqGMabvpDigTTUtxSeXLdV0O7fTwRsIZr6oEstb8ElmzW05KMj3ra+KGMcttLaoE01LcUmly+vNV0O7fTwRsIV3vXRAllrfgks1bcEbHvW1R0e7bRALJa3QMmrZRoI3ra1RwJOW2lEAOmpbik8uW6riDu30pRGkQzX1QCJa34JLNm9OSjARvW1rVHAxy20tqgB01LcUnly3VdA7t9KURpEM19boBEtb8EDZs3pyUYCN62tao4GOW2ltUAOmpbik0MvrzVdA7t9KURpEIHe9dEAiWt+CSzZvTko2m9bWqOBjTd9NUAOmpbik0MvrzVdA7t9KURpEIHe9dEAiWt4pLHN5w5f2UbTetrVCDGI3fTWiADNS0Emhl8o81XV3fOFEBEIHe9Y8KoEstb8EDZs1lGAjetrWqOBjltogB01LcUmly/Kqugd2+lKI0iGa+t0AiWt+CSzZvTkowEb1ta1RwMabvpqgB01LcULpaX4qugd2+lEbAXvrWiAHzUshfLS6OIO7fSiNIFHX1qgSy1vwQNmzWUYCN62taoQSYtt0QA6aluKF0uX5VVxB3b6UojSAIG/yCARLW/BA2bMowEb1ta1QgkxbZADpqW4oXS5flVXEHdvpSiNIAgb/ACCARLW/BA2Ob05KMBG9bWtUIJMRu/I0QA6aloVQuly/KquMd2+lEaQBA3+QQCJa34IGxzenJRoI3ra1QgkxG78jRABmpaCTQy+UearjHd9KICIQO966VQCJa3iksc3nDko2m95RqhBjEbvpDjRADpqW4oXy5bquIO7fSiNIAg6+tUAiWt+CBs2b5RRgI3ra1qjgSYtt8igB01LcULpcvyqriDu30pRGkAQN/kKoBEtb8EAmrbgo0Eb1taquid22lEAslqKoGzVUaCKut1RwJMW26IDXTUNOKF8uVVxB3b9EBAEHX6oBbLUV4IGzZvlFGgjet1qq4EmIsggdNQ04oXy5VXEHdv0QEAQdfqgFstRXggbNm+UUaCN63WqOBJiLfIoAdNQ04oXQy/KquIO7fojSAIG/yFUAiWorwQNmzfKKNEN73QgkxFvkaIAdNQ04oXQy/KquMd2/RGkAQN/kKoBEtRWKBsc3n0UaIb3uhBJiN35GiADNQ0gk0MvlHmq4x3fPggIhA7378KoBbLUV4IGzZlGgirrdUIJMW26IAdNQ04oXS5flVXEHdv0ojSAIG6AWy1FeCBs2b5RRoI3rdaoQSYi3yNEAOmoacUjLQV4quMd2/RGuAo6/VByx7eaYG6iIMezX8vZMbe6IiDntFvP9irg7vVEQcNnv5KY290REHPaLef7FXC3eqIg4bPfyUxN/oiIOe02HNXC3ev8AyURBj2e55Jib3T9kRBz2mw5qs3PI/uiIOOz3K4v3/MfsiIMmPbzTA3eqIgx7Pfy/cJjb3REQc9ot5q4W71REGPZ7nkmPfyVRB//Z" class="object" data-value="-2" alt="">
+      <img src="" class="object" data-value="6" alt="">
+      <img src="" class="object" data-value="4" alt="">
+      <img src="" class="object" data-value="-6" alt="">
+      <img src="" class="object" data-value="8" alt="">
+      <img src="" class="object" data-value="-4" alt="">
+      <img src="" class="object" data-value="5" alt="">
+      <img src="" class="object" data-value="-9" alt="">
+      <img src="" class="object" data-value="-5" alt="">
+    </div>
+
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(move){
+
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }
+    </script>
+
+  </body>
+</html>
+      

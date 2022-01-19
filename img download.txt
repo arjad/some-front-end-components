@@ -1,0 +1,26 @@
+import "./styles.css";
+import { jsPDF } from "jspdf";
+import pic from "./download.jpg"
+
+export default function App() 
+{
+  let pdfgenerate =() =>{
+    var doc = new jsPDF("landscape" , "px" , "a4", "false");
+    doc.addImage(pic, 65,20,500, 400);
+
+    doc.addPage();
+    
+    //you can change font
+    doc.setFont("Helvertica","bold");
+    //first two arguments define its margin on page
+
+    doc.text(10,10,"Name");
+    doc.save("a.pdf");
+
+  }
+  return (
+    <div className="App">
+     <button onClick={pdfgenerate}>download pdf</button>
+    </div>
+  );
+}
